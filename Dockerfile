@@ -1,12 +1,14 @@
 FROM alpine:3.18
 
-LABEL "com.example.vendor"="ACME Incorporated"
-LABEL com.example.label-with-value="foo"
 LABEL Author="AkisWinter"
-LABEL Email="a@a.com"
+LABEL Email="norman.schmidt90@gmail.com"
 LABEL version="0.1"
-LABEL description="simple Alpine Docker container enabling SSH access points for\
-                   repositories and data storage."
+LABEL description="Docker container that established a SSH access point without password login.\
+                  SSH users are initially specified in a YAML file along with their public keys.\
+                  Upon container startup, users are created within the system, and their public keys\
+                  are placed in the .ssh/authorized_keys file. New SSH public keys can be added or removed via SSH.\
+                  Currently, the YAML file is not updated automatically.\
+                  SSH, Wireguard, and fail2ban can be easily customized via volumes."
 
 RUN apk update &&\
     apk add --no-cache  bash \
