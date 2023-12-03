@@ -2,7 +2,7 @@ FROM alpine:3.18
 
 LABEL Author="AkisWinter"
 LABEL Email="norman.schmidt90@gmail.com"
-LABEL version="0.1"
+LABEL version="0.2"
 LABEL description="Docker container that established a SSH access point without password login.\
                   SSH users are initially specified in a YAML file along with their public keys.\
                   Upon container startup, users are created within the system, and their public keys\
@@ -27,6 +27,7 @@ RUN apk update &&\
                         ip6tables \
                         iputils \
                         libcap-utils \
+                        borgbackup \
                         net-tools && \
     mkdir /root/.ssh && \
     mkdir /run/sshd && \
