@@ -1,0 +1,13 @@
+users:
+  - username: user1
+    userid: 2001
+    groupid: 2001
+    sshkeys:
+      - "ssh-rsa AAAA1234... user1@example.com"
+      - "ssh-ed25519 AAAAB5678... user1@example.com"
+  - username: user2
+    userid: 2002
+    groupid: 2002
+    sshkeys:
+      - "ssh-rsa BBBB5678... user2@example.com"
+      - "ssh-ed25519 CCCC7890... user2@example.com"
