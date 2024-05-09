@@ -1,6 +1,6 @@
 FROM alpine:3.18
 
-LABEL maintainer="AkisWinter"
+LABEL Author="AkisWinter"
 LABEL Email="norman.schmidt90@gmail.com"
 LABEL version="v0.3.0"
 LABEL description="Docker container that established a SSH access point without password login.\
