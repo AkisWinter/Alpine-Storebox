@@ -1,8 +1,8 @@
-FROM alpine:3.18
+FROM alpine:3.21
 
 LABEL Author="AkisWinter"
 LABEL Email="norman.schmidt90@gmail.com"
-LABEL version="v0.3.0"
+LABEL version="v0.4.0"
 LABEL description="Docker container that established a SSH access point without password login.\
                   SSH users are initially specified in a YAML file along with their public keys.\
                   Upon container startup, users are created within the system, and their public keys\
