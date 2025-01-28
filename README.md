@@ -1,5 +1,4 @@
 # Alpine-Storebox
-Work in Progress...
 
 Docker container that established a SSH access point without password login.
 
@@ -10,8 +9,6 @@ SSH, Wireguard, and fail2ban can be easily customized via volumes.
 ## docker compose file
 
 ```docker
-version: '3.0'
-
 services:
   alpine_storebox:
     image: akiteck/alpine_storebox:latest
