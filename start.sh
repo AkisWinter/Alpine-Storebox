@@ -57,6 +57,10 @@ start_rsyslog() {
     rsyslogd &
 }
 
+update_sshkeys() {
+    echo "Updating SSH keys"
+    python /update_sshkeys.py /config/users.yaml
+}
 # Call the function
 start_rsyslog
 start_setup_py
@@ -69,5 +73,7 @@ echo "All processes started successfully"
 
 while true
 do
-    sleep 1
+    sleep 30
+    update_sshkeys
 done
+}

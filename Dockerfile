@@ -32,6 +32,8 @@ RUN apk update &&\
     mkdir /root/.ssh && \
     mkdir /run/sshd && \
     mkdir /config && \
+    mkdir /app && \
+    mkdir /app/libs && \
     mkdir /defaults && \
     mkdir /defaults/config && \
     mkdir /defaults/ssh && \
@@ -39,8 +41,8 @@ RUN apk update &&\
     rm -rf /var/cache/apk/*
 
 COPY defaults /defaults
-COPY setup.py /setup.py
-COPY start.sh /start.sh
+COPY setup.py /app/setup.py
+COPY start.sh /app/start.sh
 EXPOSE 2223
 EXPOSE 51820
 
@@ -52,4 +54,4 @@ VOLUME /etc/fail2ban
 VOLUME /home
 VOLUME /var/log
 
-ENTRYPOINT ["/usr/bin/dumb-init","/start.sh"]
+ENTRYPOINT ["/usr/bin/dumb-init","/app/start.sh"]
